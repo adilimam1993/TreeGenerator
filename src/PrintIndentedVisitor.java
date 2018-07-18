@@ -6,11 +6,11 @@ class PrintIndentedVisitor implements Visitor<String> {
         this.indent = indent;
     }
 
-    public Visitor<String> visitTree(Tree<String> tree) {
+    public Visitor<String> visitTree(FiSetNode<String> tree) {
         return new PrintIndentedVisitor(indent + 2);
     }
 
-    public void visitData(Tree<String> parent, String data) {
+    public void visitData(FiSetNode<String> parent, String data) {
         for (int i = 0; i < indent; i++) { // TODO: naive implementation
             System.out.print(" ");
         }

@@ -1,6 +1,6 @@
 public interface Visitor<T>
 {
-    Visitor<T> visitTree(Tree<T> tree);
+    Visitor<T> visitTree(FiSetNode<T> tree);
 
-    void visitData(Tree<T> parent, T data);
+    void visitData(FiSetNode<T> parent, T data);
 }
